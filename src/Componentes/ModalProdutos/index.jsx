@@ -8,10 +8,6 @@ import BtnX from '../../Assets/btn-x.svg'
 
 
 const CustomModal = styled(Modal)`
-  .modal-dialog{
-    max-width: 90%;
-  }
-
   @media screen and (min-width: 576px){
     .modal-dialog{
       max-width: 98% !important;
