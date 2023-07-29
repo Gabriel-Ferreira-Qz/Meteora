@@ -3,6 +3,7 @@
 <div align="center">
   <img src="./src/Assets/Meteora-slogan.svg" alt="Meteora: Landing Page E-Commerce">
 </div>
+
 A Meteora é uma empresa fictícia de comércio eletrônico de roupas. O projeto foi realizado seguindo o design do [Figma](https://www.figma.com) fornecido no 7º desafio Front-End da Alura. Um prazo de 4 semanas foi estabelecido para atender às demandas detalhadas no [Trello](https://trello.com/pt-BR?&aceid=&adposition=&adgroup=148159506607&campaign=19269516466&creative=641463051732&device=c&keyword=trello&matchtype=e&network=g&placement=&ds_kids=p74543507295&ds_e=GOOGLE&ds_eid=700000001557344&ds_e1=GOOGLE&gad=1&gclid=CjwKCAjwzo2mBhAUEiwAf7wjksrPgC2nQlMN04GbQw7YH1IJV0AN-7F3fqHjYUy35ouy2vv3QZ7HCRoCkgUQAvD_BwE&gclsrc=aw.ds).
 
  
