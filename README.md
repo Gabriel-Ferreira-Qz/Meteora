@@ -18,7 +18,7 @@ A Meteora é uma empresa fictícia de comércio eletrônico de roupas. O projeto
 3. [Styled-Components](https://styled-components.com/)
 4. [Axios](https://axios-http.com/ptbr/)
 5. [Yup](https://github.com/jquense/yup/tree/pre-v1)
-
+6. [Formik](https://formik.org)
 
 
 ## Como iniciar este projeto?
