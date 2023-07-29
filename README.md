@@ -22,7 +22,7 @@ A Meteora é uma empresa fictícia de comércio eletrônico de roupas. O projeto
 ## Como iniciar este projeto?
 
 ``` bash
-# Para iniciar a aplicação é nessesário que o Node.js esteja instalado no computador.
+# Para iniciar a aplicação, é necessário que o Node.js esteja instalado no computador.
 
 # Vá ao seu terminal e clone este repositório:
 $ git clone https://github.com/Gabriel-Ferreira-Qz/Meteora.git
@@ -36,7 +36,7 @@ $ npm i
 # Execute a aplicação:
 $ npm start
 
-# A aplicação será iniciada na porta 3000, "http://localhost:3000"
+# A aplicação será iniciada na porta 3000: "http://localhost:3000"
 ```
 
 ## Autor do Projeto
