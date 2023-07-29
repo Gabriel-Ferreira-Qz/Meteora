@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Loja E-Commerce Meteora
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Meteora](./src/Assets/Meteora-slogan.svg)
 
-## Available Scripts
+A meteora é uma empresa fictícia de comércio eletrônico de roupas. O projeto foi realizado seguindo o desing do [figma](https://www.figma.com) fornecido no 7° desafio Front-End da Alura, um prazo de 4 semanas foi estabelecido para atender às demandas detalhada no [trello](https://trello.com/pt-BR?&aceid=&adposition=&adgroup=148159506607&campaign=19269516466&creative=641463051732&device=c&keyword=trello&matchtype=e&network=g&placement=&ds_kids=p74543507295&ds_e=GOOGLE&ds_eid=700000001557344&ds_e1=GOOGLE&gad=1&gclid=CjwKCAjwzo2mBhAUEiwAf7wjksrPgC2nQlMN04GbQw7YH1IJV0AN-7F3fqHjYUy35ouy2vv3QZ7HCRoCkgUQAvD_BwE&gclsrc=aw.ds).
 
-In the project directory, you can run:
+ 
+[Link demonstrativo](https://meteora-94nu-g43gmvcza-bielq26.vercel.app/)
 
-### `npm start`
+## Layout
+![Tela Desktop](./public/demonstrativo.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tecnologias Utilizadas
+1. [React](https://pt-br.react.dev)
+2. [React-Bootstrap](https://react-bootstrap.netlify.app/)
+3. [Styled-Components](https://styled-components.com/)
+4. [Axios](https://axios-http.com/ptbr/)
+5. [Yup](https://github.com/jquense/yup/tree/pre-v1)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Como iniciar este projeto?
 
-### `npm run build`
+``` bash
+# Para iniciar a aplicação é nessesário que o Node.js esteja instalado no computador.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Vá ao seu terminal e clone este repositório:
+$ git clone https://github.com/Gabriel-Ferreira-Qz/Meteora.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Acesse a pasta do projeto:
+$ cd meteora 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# instale todas as dependências:
+$ npm i
 
-### `npm run eject`
+# Execute a aplicação:
+$ npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# A aplicação será iniciada na porta 3000, "http://localhost:3000"
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Autor do Projeto
+[Linkedin](https://www.linkedin.com/in/gabriel-queiroz-7a1428212/)
