@@ -8,15 +8,6 @@
 A aplicação é uma Landing Page de comércio eletrônico desenvolvida para representar uma empresa fictícia de moda "Meteora". O projeto foi criado como parte do 7º desafio Front-End da Alura seguindo o design fornecido no [Figma](https://www.figma.com). A proposta era criar uma página de e-commerce com duração de 4 semanas, seguindo as demandas detalhadas no [Trello](https://trello.com/pt-BR?&aceid=&adposition=&adgroup=148159506607&campaign=19269516466&creative=641463051732&device=c&keyword=trello&matchtype=e&network=g&placement=&ds_kids=p74543507295&ds_e=GOOGLE&ds_eid=700000001557344&ds_e1=GOOGLE&gad=1&gclid=CjwKCAjwzo2mBhAUEiwAf7wjksrPgC2nQlMN04GbQw7YH1IJV0AN-7F3fqHjYUy35ouy2vv3QZ7HCRoCkgUQAvD_BwE&gclsrc=aw.ds).
 
 
-## Índice
-- <a href="#layout-🎨">Layout</a>
-- <a href="#👀-como-visualizar-o-projeto">Como visualizar o projeto?</a>
-- <a href="#tecnologias-utilizadas-🛠️">Tecnologias Utilizadas</a>
-- <a href="#como-iniciar-este-projeto-👨‍💻">Como Iniciar Este Projeto</a>
-- <a href="#autor-do-projeto">Autor do Projeto</a>
-
-
-
 ## Layout 🎨
 ![Tela Desktop](./public/demonstrativo.png)
 
@@ -66,6 +57,6 @@ $ npm start
 ```
 
 ## Autor do Projeto
-Este projeto foi desenvolvido por Gabriel Ferreira de Queiroz. Se deseja entrar em contato, [acesse o meu perfil no LinkedIn]((https://www.linkedin.com/in/gabriel-queiroz-7a1428212/)).
+Este projeto foi desenvolvido por Gabriel Ferreira de Queiroz. Se deseja entrar em contato, [acesse o meu perfil no LinkedIn](https://www.linkedin.com/in/gabriel-queiroz-7a1428212/).
 
 Agradeço por conferir este projeto e espero que tenha uma ótima experiência explorando a página da Meteora! 😄
