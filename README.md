@@ -18,7 +18,7 @@ A página apresenta uma interface moderna e responsiva, permitindo que os usuár
 
 ## Como visualizar o projeto? 👀
 
-Para visualizar o projeto, você pode acessar a [demonstração online](https://meteora-94nu-g43gmvcza-bielq26.vercel.app/). Nela você poderá explorar todas as funcionalidades do projeto.
+Para visualizar o projeto, você pode acessar a [demonstração online](https://meteora-wkx9.vercel.app/). Nela você poderá explorar todas as funcionalidades do projeto.
 
 ## Tecnologias Utilizadas 🛠️
 1. [React](https://pt-br.react.dev) - Biblioteca JavaScript para construir interfaces de usuário interativas. 🚀
