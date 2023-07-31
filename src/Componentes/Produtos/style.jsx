@@ -1,5 +1,5 @@
 import { Button, Card } from "react-bootstrap"
-import { styled } from "styled-components"
+import styled from "styled-components"
 
 export const Section = styled.section`
     width: 90%;

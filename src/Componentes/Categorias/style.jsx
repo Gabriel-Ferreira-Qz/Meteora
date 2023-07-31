@@ -1,5 +1,5 @@
 import { Card } from "react-bootstrap"
-import { styled } from "styled-components"
+import styled from "styled-components"
 
 export const Section = styled.section`
     text-align: center;

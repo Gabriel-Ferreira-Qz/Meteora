@@ -1,5 +1,5 @@
 import { Button, Container, Form, Navbar } from "react-bootstrap"
-import { styled } from "styled-components"
+import styled from "styled-components"
 
 import Hamburger from '../../Assets/img-header/Menu-hamburger.svg'
 

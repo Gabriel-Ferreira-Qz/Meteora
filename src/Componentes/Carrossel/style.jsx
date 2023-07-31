@@ -1,5 +1,5 @@
 import { Carousel } from "react-bootstrap";
-import { styled } from "styled-components";
+import styled from "styled-components";
 
 export const CustomCarrossel = styled(Carousel)`
   padding-top: 10rem;

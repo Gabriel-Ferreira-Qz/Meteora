@@ -1,5 +1,5 @@
 import { Modal } from "react-bootstrap"
-import { styled } from "styled-components"
+import styled from "styled-components"
 
 import BtnX from '../../Assets/btn-x.svg'
 
