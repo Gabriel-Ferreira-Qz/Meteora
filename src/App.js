@@ -21,64 +21,68 @@ const GlobalStyles = createGlobalStyle`
       width: 10px;
     }
 
-    &::-webkit-scrollbar-thumb{
+    &::-webkit-scrollbar-thumb {
       background-color: #000000;
     }
 
-    &::-webkit-scrollbar-track{
+    &::-webkit-scrollbar-track {
       -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
       background-color: #FFFFFF;
     }
-
+  }
 `
 
 function App() {
 
-  //API dos produtos
+  //API
   const [apiProdutos, setApiProdutos] = useState([])
+
+  const [apiCategorias, setApiCategorias] = useState([])
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const responseProdutos = await axios.get('https://api-rest-meteora.vercel.app/data')
+        const resposta = await axios.get('https://api-rest-meteora.vercel.app/data')
 
-        setApiProdutos(responseProdutos.data.produtos)
+        setApiProdutos(resposta.data.produtos)
+        setApiCategorias(resposta.data.categorias)
       } catch (error) {
         console.error('Erro ao buscar os dados da API:', error);
       }
     };
-
+    
     fetchData();
   }, []);
-
+  
   //Filtragem da API 
   const [filtro, setFiltro] = useState('')
 
   const pesquisaFiltrada = apiProdutos.filter((produto) => produto.id.toLocaleLowerCase().includes(filtro.toLocaleLowerCase()))
 
-
   return (
     <div className='App'>
       <Fragment>
         <GlobalStyles />
-
         <Header
           setFiltro={setFiltro}
         />
+
         <main>
           <Carrossel />
           <Categorias
             setFiltro={setFiltro}
+            apiCategorias={apiCategorias}
           />
           <Produtos
-            api={apiProdutos}
+            apiProdutos={apiProdutos}
             pesquisaFiltrada={pesquisaFiltrada}
+            valorDaBusca={filtro}
           />
           <Facilidades />
           <Formulario />
         </main>
-        <Footer />
 
+        <Footer />
       </Fragment>
     </div>
   );

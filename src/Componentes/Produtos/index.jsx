@@ -1,80 +1,76 @@
 import { useState } from "react";
-import styled from "styled-components";
+import { Card } from "react-bootstrap";
 
-import ProdutosCard from "./Produtos-card";
+import { Botao, CardTitulo, Cartao, Cartoes, Descricao, ErroDeBusca, Preco, Section, Titulo } from "./style";
+
+import ManequimError from "../../Assets/dummy-error.png"
+
 import ModalProdutos from "../ModalProdutos";
 
-const Section = styled.section`
-    width: 90%;
-    margin: 0 auto 3rem;
-    h2 {
-        text-align: center;
-        font-size: 2rem;
-        font-weight: 500;
-        margin-bottom: 1.875rem;
-    }
 
-    @media screen and (min-width: 1220px){
-        width: 80%;
-        margin: 0 auto 4rem;
-    }
-`
-
-const Cartoes = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-
-    @media screen and (min-width: 768px){
-        grid-template-columns: 1fr 1fr;
-        display: grid;
-        grid-template-rows: repeat(auto-fill, minmax(0px, 1fr));
-        justify-content: center;
-    }
-
-    @media screen and (min-width: 1220px){
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-`
-
-export default function Produtos({ api, pesquisaFiltrada }) {
+export default function Produtos({ apiProdutos, pesquisaFiltrada, valorDaBusca }) {
 
     const [show, setShow] = useState(false)
 
     const handleClose = () => setShow(false)
     const handleShow = () => setShow(true)
 
+    const handleClick = (e) => {
+        const alvo = e.target.id
+        const valor = apiProdutos.filter((produto) => produto.id === alvo)
+        setProdutoModal(valor[0])
+        handleShow()
+    }
+
     const [produtoModal, setProdutoModal] = useState(
-        {   
-            imagem: '', 
-            alt: '', 
-            titulo: '', 
-            descricao: '', 
+        {
+            imagem: '',
+            alt: '',
+            titulo: '',
+            descricao: '',
             preco: '',
         }
     )
 
+    const isError = pesquisaFiltrada[0] === undefined
 
     return (
         <Section>
-            <h2>Produtos que estão bombando!</h2>
-            <Cartoes>
-            {pesquisaFiltrada.map((produto, k) =>
-                    <div key={k}>
-                        <ProdutosCard
-                            descricao={produto.descricao}
-                            imagem={produto.imagem}
-                            preco={produto.preco}
-                            titulo={produto.titulo}
-                            alt={produto.alt}
-                            id={produto.id}
-                            setProduto={setProdutoModal}
-                            produtos={api}
-                            handleShow={handleShow}
-                        />
-                    </div>
-                )}
+            <h2>
+                {isError ? "OPS!" : "Produtos que estão bombando!"}
+            </h2>
+            <Cartoes $isError={isError}>
+                {isError ? (
+                    <ErroDeBusca>
+                        <img src={ManequimError} alt="Desenho do um manequim" />
+
+                        <p>Sua busca por <span>{valorDaBusca}</span> não gerou resultados.<br></br>Nossas categorias podem ter o que você procura!</p>
+                    </ErroDeBusca>
+                ) :
+                    pesquisaFiltrada.map((produto, k) =>
+                        <Cartao key={k}>
+                            <Card.Img
+                                variant="top"
+                                src={produto.imagem}
+                                alt={produto.alt} />
+                            <CardTitulo>
+                                <Titulo>{produto.titulo}</Titulo>
+                                <Descricao>{produto.descricao}</Descricao>
+                                <Preco>{produto.preco}</Preco>
+
+                                <Botao
+                                    variant="primary"
+                                    id={produto.id}
+                                    onClick={(e) => handleClick(e)}
+                                >
+                                    Ver mais
+                                </Botao>
+                            </CardTitulo>
+                        </Cartao>
+                    )
+                }
             </Cartoes>
+
             <ModalProdutos
                 show={show}
                 handleClose={handleClose}

@@ -1,31 +1,19 @@
 import Carousel from 'react-bootstrap/Carousel';
-import styled from 'styled-components';
+import { CustomCarrossel } from './style';
 
-import banner1 from './img/Banner-carrossel-1.svg'
-import bannerTablet1 from './img/Banner-carrossel-tablet-1.svg'
-import bannerMobile1 from './img/Banner-carrossel-mobile-1.svg'
+import banner1 from '../../Assets/img-carrossel/Banner-carrossel-1.svg'
+import bannerTablet1 from '../../Assets/img-carrossel/Banner-carrossel-tablet-1.svg'
+import bannerMobile1 from '../../Assets/img-carrossel/Banner-carrossel-mobile-1.svg'
 
-import banner2 from './img/Banner-carrossel-2.svg'
-import bannerTablet2 from './img/Banner-carrossel-tablet-2.svg'
-import bannerMobile2 from './img/Banner-carrossel-mobile-2.svg'
+import banner2 from '../../Assets/img-carrossel/Banner-carrossel-2.svg'
+import bannerTablet2 from '../../Assets/img-carrossel/Banner-carrossel-tablet-2.svg'
+import bannerMobile2 from '../../Assets/img-carrossel/Banner-carrossel-mobile-2.svg'
 
-import banner3 from './img/Banner-carrossel-3.svg'
-import bannerTablet3 from './img/Banner-carrossel-tablet-3.svg'
-import bannerMobile3 from './img/Banner-carrossel-mobile-3.svg'
+import banner3 from '../../Assets/img-carrossel/Banner-carrossel-3.svg'
+import bannerTablet3 from '../../Assets/img-carrossel/Banner-carrossel-tablet-3.svg'
+import bannerMobile3 from '../../Assets/img-carrossel/Banner-carrossel-mobile-3.svg'
 
-import CarrosselBanner from './Carrossel-Banner';
 
-const CustomCarrossel = styled(Carousel)`
-  padding-top: 10rem;
-
-  @media screen and (min-width: 768px){
-    padding-top: 4rem;
-  }
-  
-  @media screen and (min-width: 1220px){
-    padding-top: 4.35rem;
-  }
-`
 
 export default function Carrossel() {
 
@@ -57,13 +45,15 @@ export default function Carrossel() {
     <CustomCarrossel>
       {imagem.map((img, k) =>
         <Carousel.Item key={k}>
-          <CarrosselBanner
-            className="d-block w-100"
-            desktop={img.desktop}
-            tablet={img.tablet}
-            mobile={img.mobile}
-            alt={img.alt}
-          />
+          <picture>
+            <source srcSet={img.desktop} media="(min-width: 1220px" />
+            <source srcSet={img.tablet} media="(min-width: 768px" />
+            <img
+              className="d-block w-100"
+              src={img.mobile}
+              alt={img.alt}
+            />
+          </picture>
         </Carousel.Item>
       )}
     </CustomCarrossel>
