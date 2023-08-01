@@ -54,7 +54,7 @@ function App() {
       };
   
       fetchData();
-    }, 3000)
+    }, 2500)
   }, []);
 
   //Filtragem da API 
