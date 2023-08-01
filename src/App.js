@@ -7,6 +7,7 @@ import Produtos from './Componentes/Produtos';
 import Facilidades from './Componentes/Facilidades';
 import Formulario from './Componentes/Formulario';
 import Footer from './Componentes/Footer';
+import Loading from './Componentes/Loading';
 
 import { Fragment, useEffect, useState } from 'react';
 import { createGlobalStyle } from 'styled-components';
@@ -35,29 +36,37 @@ const GlobalStyles = createGlobalStyle`
 function App() {
 
   //API
-  const [apiProdutos, setApiProdutos] = useState([])
+  const [apiContent, setApiContent] = useState({ produtos: [], categorias: [] })
 
-  const [apiCategorias, setApiCategorias] = useState([])
+  const produtosECategorias = [...apiContent.produtos, ...apiContent.categorias]
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const resposta = await axios.get('https://api-rest-meteora.vercel.app/data')
-
-        setApiProdutos(resposta.data.produtos)
-        setApiCategorias(resposta.data.categorias)
-      } catch (error) {
-        console.error('Erro ao buscar os dados da API:', error);
-      }
-    };
-    
-    fetchData();
-  }, []);
+    setTimeout(() => {
+      const fetchData = async () => {
+        try {
+          const resposta = await axios.get('https://api-rest-meteora.vercel.app/data')
   
+          setApiContent(resposta.data)
+        } catch (error) {
+          console.error('Erro ao buscar os dados da API:', error);
+        } finally {
+          setLoading(false)
+        }
+      };
+  
+      fetchData();
+    }, 3000)
+  }, []);
+
   //Filtragem da API 
+
   const [filtro, setFiltro] = useState('')
 
-  const pesquisaFiltrada = apiProdutos.filter((produto) => produto.id.toLocaleLowerCase().includes(filtro.toLocaleLowerCase()))
+  const pesquisaFiltrada = apiContent.produtos.filter((produto) => produto.id.toLocaleLowerCase().includes(filtro.toLocaleLowerCase()))
+
+  //Loading
+
+  const [loading, setLoading] = useState(true)
 
   return (
     <div className='App'>
@@ -69,15 +78,20 @@ function App() {
 
         <main>
           <Carrossel />
-          <Categorias
-            setFiltro={setFiltro}
-            apiCategorias={apiCategorias}
-          />
-          <Produtos
-            apiProdutos={apiProdutos}
-            pesquisaFiltrada={pesquisaFiltrada}
-            valorDaBusca={filtro}
-          />
+          {produtosECategorias.length > 0 && (
+            <>
+              <Categorias
+                setFiltro={setFiltro}
+                apiCategorias={apiContent.categorias}
+              />
+              <Produtos
+                apiProdutos={apiContent.produtos}
+                pesquisaFiltrada={pesquisaFiltrada}
+                valorDaBusca={filtro}
+              />
+            </>
+          )}
+          {loading && <Loading />}
           <Facilidades />
           <Formulario />
         </main>
