@@ -47,11 +47,10 @@ function App() {
           const resposta = await axios.get('https://api-rest-meteora.vercel.app/data')
   
           setApiContent(resposta.data)
+          setLoading(false)
         } catch (error) {
           console.error('Erro ao buscar os dados da API:', error);
-        } finally {
-          setLoading(false)
-        }
+        } 
       };
   
       fetchData();
