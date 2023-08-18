@@ -5,7 +5,7 @@
 </div>
 
 
-A aplicação é uma Landing Page de comércio eletrônico desenvolvida para representar uma empresa fictícia de moda "Meteora". O projeto foi criado como parte do 7º desafio Front-End da Alura seguindo o design fornecido no [Figma](https://www.figma.com). A proposta era criar uma página de e-commerce com duração de 4 semanas, seguindo as demandas detalhadas no [Trello](https://trello.com/pt-BR?&aceid=&adposition=&adgroup=148159506607&campaign=19269516466&creative=641463051732&device=c&keyword=trello&matchtype=e&network=g&placement=&ds_kids=p74543507295&ds_e=GOOGLE&ds_eid=700000001557344&ds_e1=GOOGLE&gad=1&gclid=CjwKCAjwzo2mBhAUEiwAf7wjksrPgC2nQlMN04GbQw7YH1IJV0AN-7F3fqHjYUy35ouy2vv3QZ7HCRoCkgUQAvD_BwE&gclsrc=aw.ds).
+O site é uma Landing Page de comércio eletrônico desenvolvida para representar uma empresa fictícia de moda "Meteora". O projeto foi criado como parte do 7º desafio Front-End da Alura seguindo o design fornecido no [Figma](https://www.figma.com). A proposta era criar uma página de e-commerce com duração de 4 semanas, seguindo as demandas detalhadas no [Trello](https://trello.com/pt-BR?&aceid=&adposition=&adgroup=148159506607&campaign=19269516466&creative=641463051732&device=c&keyword=trello&matchtype=e&network=g&placement=&ds_kids=p74543507295&ds_e=GOOGLE&ds_eid=700000001557344&ds_e1=GOOGLE&gad=1&gclid=CjwKCAjwzo2mBhAUEiwAf7wjksrPgC2nQlMN04GbQw7YH1IJV0AN-7F3fqHjYUy35ouy2vv3QZ7HCRoCkgUQAvD_BwE&gclsrc=aw.ds).
 
 
 ## Layout 🎨
